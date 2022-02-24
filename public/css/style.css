@@ -1,0 +1,47 @@
+body {
+  background-image: linear-gradient( 94.3deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% );
+  font-family: 'Cairo', sans-serif;
+  color: white;
+
+}
+
+.hero {
+
+}
+
+.hero-center {
+  margin: auto 0;
+  width: 100%;
+  text-align: center;
+}
+
+.css-selector {
+    background: linear-gradient(270deg, #169473, #aec1bc);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 4s ease infinite;
+    -moz-animation: AnimationName 4s ease infinite;
+    -o-animation: AnimationName 4s ease infinite;
+    animation: AnimationName 4s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}

@@ -19,6 +19,7 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.3",
+    "pupeteer": "^0.0.1",
     "puppeteer": "^13.4.0"
   }
 }
