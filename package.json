@@ -1,0 +1,22 @@
+{
+  "name": "markt_io",
+  "version": "1.0.0",
+  "description": "Stocks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlettau/markt.io.git"
+  },
+  "author": "marlettau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marlettau/markt.io/issues"
+  },
+  "homepage": "https://github.com/marlettau/markt.io#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
