@@ -1,6 +1,5 @@
 var menu = document.getElementById("stockSearchInfoDialog")
 
-
 $(function() {
   $(".hero-stock-input-container").on("click", function(){
     $(this).addClass('hero-input-error');

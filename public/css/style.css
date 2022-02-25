@@ -4,6 +4,10 @@ body {
   color: white;
   overflow: hidden;
 
+-webkit-user-select: none; /* Safari */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
 }
 
 input:focus,
@@ -11,6 +15,12 @@ select:focus,
 textarea:focus,
 button:focus {
     outline: none;
+}
+
+.site-logo
+{
+ justify-content: center;
+ display: inline-flex;
 }
 
 
@@ -102,6 +112,15 @@ transform-origin: center center;
   transition: transform 500ms, background-color 250ms;
 }
 
+.hero-stock-input::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: rgba(26,33,64,1);
+}
+
+.hero-stock-input::selection {
+  color: white;
+  background: rgba(26,33,64,1);
+}
 
 .hero-stock-input-container:hover
 {
