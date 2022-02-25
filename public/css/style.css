@@ -2,17 +2,100 @@ body {
   background-image: linear-gradient( 94.3deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% );
   font-family: 'Cairo', sans-serif;
   color: white;
+  overflow: hidden;
 
 }
 
-.hero {
-
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
 
-.hero-center {
+
+/* HERO CONTENT STYLES START */
+
+.hero
+{
+  transform-origin: center center;
+}
+
+.hero-horizontal-center {
   margin: auto 0;
   width: 100%;
   text-align: center;
+  transform-origin: center center;
+}
+
+.hero-vertical-center
+{
+  padding-top: 5%;
+  margin: auto 0;
+  width: 100%;
+  text-align: center;
+  transform-origin: center center;
+}
+
+.hero-content
+{
+
+}
+
+/* HERO CONTENT STYLES END */
+
+.hero-stock-input-label
+{
+  font-size: 35px;
+
+}
+
+.hero-stock-input
+{
+  font-family: 'Cairo', sans-serif;
+  width: 40%;
+
+  opacity: 0.5;
+  padding:10px;
+ border:0;
+ box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+transform-origin: center center;
+  transition: transform 500ms;
+  transition: background-color 250ms;
+}
+
+.hero-stock-input:hover
+{
+  transform: scale(1.1);
+
+
+}
+
+.hero-input-error
+{
+  background-color: red;
+  color: white;
+  animation: errorShakeAnimation 0.82s cubic-bezier(.36,.07,.19,.97) both;
+
+}
+
+@-webkit-keyframes errorShakeAnimation {
+  10%, 90% {
+      transform: translate3d(-2px, 0, 0);
+    }
+
+    20%, 80% {
+      transform: translate3d(4px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+      transform: translate3d(-8px, 0, 0);
+    }
+
+    40%, 60% {
+      transform: translate3d(8px, 0, 0);
+    }
 }
 
 .css-selector {
