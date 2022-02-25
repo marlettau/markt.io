@@ -2,11 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <title>markt.io</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+<link href='https://css.gg/info.css' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   </head>
   <body scroll="no">
 
@@ -17,10 +19,21 @@
 
       <div class="hero-vertical-center">
 
-          <h3 class="hero-stock-input-label">Enter a stock symbol</h3>
-          <input class="hero-stock-input" autocomplete="off" type="text" name="" value="" placeholder="NVDA...">
+          <h2 class="hero-stock-input-label">Enter a stock symbol</h2>
+          <form class="hero-stock-form" action="" method="post">
+            <div class="hero-stock-input-container">
+              <input class="hero-stock-input" autocomplete="off" type="text" name="" value="" placeholder="NVDA...">
+              <div class="hero-stock-input-icon-container" >
+                <a><i id="heroStockInputIcon" class="gg-info hero-stock-input-icon"></i></a>
+              </div>
+            </div>
+          </form>
 
       </div>
+
+    <div id="stockSearchInfoDialog" class="stock-search-info-dialog">
+    <p>Enter a stock symbol into the input to recive live and historic data associated with entered symbol.</p>
+</div>
 
 
     </div>
@@ -37,10 +50,7 @@
 
 
     <!-- SCRIPTS -->
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.slim.js"
-  integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
-  crossorigin="anonymous"></script>
+
   <script type="text/javascript" src="/javascript/hero-input.js"></script>
   </body>
 </html>

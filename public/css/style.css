@@ -44,6 +44,43 @@ button:focus {
 
 /* HERO CONTENT STYLES END */
 
+.hero-stock-input-container
+{
+  display: inline-flex;
+height: auto;
+width: 100%;
+justify-content: center;
+  transition: transform 500ms, background-color 250ms;
+}
+.hero-stock-input-icon-container
+{
+  justify-content: center;
+  margin: auto 0;
+  text-align: center;
+  transform-origin: 50% 50%;
+  transform: translate(-35px, 0px);
+}
+
+.hero-stock-input-icon
+{
+  color: white;
+  opacity: 0.5;
+  transition: 500ms;
+}
+
+.hero-stock-input-icon:hover
+{
+  opacity: 1;
+    transform: scale(1.1);
+  cursor: pointer;
+}
+
+.hero-stock-input-icon-error
+{
+  transform: rotate(180deg);
+}
+
+
 .hero-stock-input-label
 {
   font-size: 35px;
@@ -54,30 +91,34 @@ button:focus {
 {
   font-family: 'Cairo', sans-serif;
   width: 40%;
-
   opacity: 0.5;
   padding:10px;
  border:0;
  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   border-radius:10px;
 transform-origin: center center;
-  transition: transform 500ms;
-  transition: background-color 250ms;
+  transition: transform 500ms, background-color 250ms;
 }
 
-.hero-stock-input:hover
+.hero-stock-input-container:hover
 {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
 
-
+.hero-input-error-color-change
+{
+  background-color: red;
+  color: white;
 }
 
 .hero-input-error
 {
-  background-color: red;
-  color: white;
   animation: errorShakeAnimation 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
 
+.hero-input-error-color-change::-webkit-input-placeholder
+{
+  color: white;
 }
 
 @-webkit-keyframes errorShakeAnimation {
@@ -96,6 +137,26 @@ transform-origin: center center;
     40%, 60% {
       transform: translate3d(8px, 0, 0);
     }
+}
+
+
+.stock-search-info-dialog
+{
+  display: none;
+  position: absolute;
+  text-align: left;
+  background: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px 5px;
+  font-size: 15px;
+  width: 20%;
+  color: gray;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  font-family: 'Cairo', sans-serif;
+  opacity: 1;
+
 }
 
 .css-selector {
