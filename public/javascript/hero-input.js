@@ -1,17 +1,27 @@
+var menu = document.getElementById("stockSearchInfoDialog")
+
+
 $(function() {
   $(".hero-stock-input-container").on("click", function(){
     $(this).addClass('hero-input-error');
     $(this).find("input").addClass('hero-input-error-color-change');
     $(this).find("i").addClass('hero-stock-input-icon-error');
+    $('.disable-overlay').css('display', 'flex');
+
   }).on("animationend", function(){
     $(this).removeClass('hero-input-error');
     $(this).find("input").removeClass('hero-input-error-color-change');
     $(this).find("i").removeClass('hero-stock-input-icon-error');
+    $('.disable-overlay').css('display', 'none');
+
   });
 });
 
 
-  var menu = document.getElementById("stockSearchInfoDialog")
+
+
+
+
 
 
 
