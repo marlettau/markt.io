@@ -9,6 +9,7 @@
 <link href='https://css.gg/info.css' rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   </head>
   <body scroll="no">
 
@@ -23,7 +24,21 @@
 
       <div class="hero-vertical-center">
 
-          <h2 class="hero-stock-input-label">Enter a stock symbol</h2>
+          <!-- <h2 class="hero-stock-input-label">Enter a stock symbol</h2> -->
+
+          <div class="hero-stock-input-label-content">
+            <div class="hero-stock-input-label-content-container">
+              <p class="hero-stock-input-label-content-container-text">Enter</p>
+
+              <ul class="hero-stock-input-label-content-container-list">
+                <li class="hero-stock-input-label-content-container-list-item">a stock.</li>
+                <li class="hero-stock-input-label-content-container-list-item">a symbol.</li>
+                <li class="hero-stock-input-label-content-container-list-item">a market.</li>
+                <li class="hero-stock-input-label-content-container-list-item">a currency.</li>
+              </ul>
+            </div>
+          </div>
+
           <form class="hero-stock-form" action="" method="post">
             <div class="hero-stock-input-container">
               <input class="hero-stock-input" autocomplete="off" type="text" name="" value="" placeholder="NVDA...">
@@ -34,6 +49,11 @@
           </form>
 
       </div>
+
+
+
+
+
 
     <div id="stockSearchInfoDialog" class="stock-search-info-dialog">
     <p>Enter a stock symbol into the input to recive live and historic data associated with entered symbol.</p>
