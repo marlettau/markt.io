@@ -97,7 +97,7 @@ res.render('index', {stockSymbolInput: "Stock"});
 
   if(stockPrice === "notValid")
   {
-    res.send({response: `Not a valid stock`});
+    res.send({response: `error`});
   }
   else {
     res.send({response: `The Current Stock Price of ${enteredStock} is $${stockPrice}`});

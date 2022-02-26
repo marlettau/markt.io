@@ -3,8 +3,9 @@ var menu = document.getElementById("stockSearchInfoDialog")
 $(document).ready(function() {
   $('#heroStockForm').on("submit", function(event){
     event.preventDefault();
-    let value = $("#stockInput").val();
+    let value = $("#stockInput").val().toUpperCase();
     $(".stockOutput").text("Loading...");
+    $('.disable-overlay').css('display', 'flex');
 
     $.ajax({
       url: "/stocksearch",
@@ -12,7 +13,19 @@ $(document).ready(function() {
       contentType: "application/json",
       data: JSON.stringify({stockSymbolInput: value}),
       success: function(res){
-        $(".stockOutput").html(`${res.response}`);
+
+        if(res.response === "error")
+        {
+          $(".hero-stock-input-container").addClass('hero-input-error');
+          $(".hero-stock-input-container").find("input").addClass('hero-input-error-color-change');
+          $(".hero-stock-input-container").find("i").addClass('hero-stock-input-icon-error');
+          $('.disable-overlay').css('display', 'flex');
+          $(".stockOutput").html("Not a real stock symbol");
+        }
+        else {
+          $(".stockOutput").html(`${res.response}`);
+          $('.disable-overlay').css('display', 'none');
+        }
       }
     })
   })
@@ -20,13 +33,7 @@ $(document).ready(function() {
 
 
 $(function() {
-  $(".hero-stock-input-container").on("click", function(){
-    $(this).addClass('hero-input-error');
-    $(this).find("input").addClass('hero-input-error-color-change');
-    $(this).find("i").addClass('hero-stock-input-icon-error');
-    $('.disable-overlay').css('display', 'flex');
-
-  }).on("animationend", function(){
+  $(".hero-stock-input-container").on("animationend", function(){
     $(this).removeClass('hero-input-error');
     $(this).find("input").removeClass('hero-input-error-color-change');
     $(this).find("i").removeClass('hero-stock-input-icon-error');
