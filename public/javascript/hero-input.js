@@ -1,5 +1,24 @@
 var menu = document.getElementById("stockSearchInfoDialog")
 
+$(document).ready(function() {
+  $('#heroStockForm').on("submit", function(event){
+    event.preventDefault();
+    let value = $("#stockInput").val();
+    $(".stockOutput").text("Loading...");
+
+    $.ajax({
+      url: "/stocksearch",
+      method: "POST",
+      contentType: "application/json",
+      data: JSON.stringify({stockSymbolInput: value}),
+      success: function(res){
+        $(".stockOutput").html(`${res.response}`);
+      }
+    })
+  })
+});
+
+
 $(function() {
   $(".hero-stock-input-container").on("click", function(){
     $(this).addClass('hero-input-error');
@@ -15,10 +34,6 @@ $(function() {
 
   });
 });
-
-
-
-
 
 
 
