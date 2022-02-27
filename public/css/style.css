@@ -21,6 +21,18 @@ button:focus {
 {
  justify-content: center;
  display: inline-flex;
+   transition: 1s;
+   position: absolute;
+   margin: auto 0;
+width: 100%;
+text-align: center;
+transform-origin: center center;
+transform: translate(-45%, -120%);
+}
+
+.site-logo-next-newPage
+{
+  transform: translate(-45%, -20%);
 }
 
 
@@ -446,4 +458,14 @@ filter: blur(6px);
   width: 100%;
   height: 100%;
   z-index: 16;
+}
+
+.page-content
+{
+  transition: 2s;
+}
+
+.page-content-next-page
+{
+  transform: translateY(-80%);
 }

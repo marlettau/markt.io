@@ -34,6 +34,8 @@ $(document).ready(function() {
         }
         else {
           $(".stockSearchInfoDialogStockPrice").html(`${res.response}`);
+          $(".page-content").addClass('page-content-next-page');
+          $(".site-logo").addClass('site-logo-next-newPage');
           $('.disable-overlay').css('display', 'none');
           $(".loadingOverlay").fadeOut();
           $(".loadingOverlayGrapic").fadeOut();
