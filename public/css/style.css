@@ -460,6 +460,7 @@ transform-origin: center center;
 z-index: 15;
 backdrop-filter: blur(6px);
 filter: blur(6px);
+left: 0;
 }
 
 .loadingOverlayGraphic
@@ -482,4 +483,15 @@ filter: blur(6px);
 .page-content-next-page
 {
   transform: translateY(-78%);
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-weight: lighter;
 }

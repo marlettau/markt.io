@@ -22,7 +22,7 @@ $(document).ready(function() {
     $(".stockOutput").text("Loading...");
     $('.disable-overlay').css('display', 'flex');
     $(".loadingOverlay").fadeIn("slow");
-    $(".loadingOverlayGrapic").fadeIn("slow");
+    $(".loadingOverlayGraphic").fadeIn("slow");
     $(".stockOutput").fadeIn("slow");
 
     $.ajax({
@@ -58,7 +58,9 @@ $(document).ready(function() {
 
 
 $(function() {
-  $(".hero-stock-input-container").on("animationend", function(){
+  $(".hero-stock-input-container").on("click", function(){
+    mainPage();
+  }).on("animationend", function(){
     $(this).removeClass('hero-input-error');
     $(this).find("input").removeClass('hero-input-error-color-change');
     $(this).find("i").removeClass('hero-stock-input-icon-error');
