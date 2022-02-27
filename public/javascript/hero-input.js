@@ -4,6 +4,16 @@ $(".loading-overlay").hide();
 $(".stockOutput").hide();
 $(".loadingOverlayGrapic").hide();
 $(".loadingOverlay").hide();
+$(".main-content").hide();
+
+function mainPage()
+{
+  console.log("back");
+  $(".main-content").fadeOut("slow");
+  $(".page-content").removeClass('page-content-next-page');
+  $(".site-logo").removeClass('site-logo-next-newPage');
+}
+
 
 $(document).ready(function() {
   $('#heroStockForm').on("submit", function(event){
@@ -34,6 +44,7 @@ $(document).ready(function() {
         }
         else {
           $(".stockSearchInfoDialogStockPrice").html(`${res.response}`);
+          $(".main-content").fadeIn("slow");
           $(".page-content").addClass('page-content-next-page');
           $(".site-logo").addClass('site-logo-next-newPage');
           $('.disable-overlay').css('display', 'none');
@@ -55,6 +66,7 @@ $(function() {
 
   });
 });
+
 
 
 
