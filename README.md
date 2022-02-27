@@ -27,3 +27,32 @@ Scraping Method for basic stock data
       return currentStockPrice.innerHTML;
     });
 ```
+
+<br>
+<br>
+<br>
+
+Query Stock Scrraping Concept (Light Weight)
+
+```
+https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=15min&outputsize=full&apikey=demo
+
+const getCurrentStockPrice = await page.evaluate(() => {
+
+  let currentStockPrice = document.querySelector('body');
+  const stockPrice = currentStockPrice.innerHTML.toString();
+  const stockPriceString = stockPrice.substring(stockPrice.indexOf('"regularMarketPrice":')+21, stockPrice.indexOf(',"chartPrevi'));
+
+  const findError = stockPrice.substring(stockPrice.indexOf('":{"code":"')+11, stockPrice.indexOf('","descripti'));
+  if(findError === "Not Found")
+  {
+    return "notValid";
+  }
+  else {
+    return stockPriceString.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+
+});
+
+```
