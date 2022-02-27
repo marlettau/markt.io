@@ -405,6 +405,10 @@ transform-origin: center center;
   transition: 500ms;
 }
 
+.stock-data-info hr{
+  background-color: rgba(81,84,115,1);
+}
+
 .stock-data-info:hover
 {
   transform: scale(1.05);
