@@ -345,3 +345,73 @@ transform-origin: center center;
     transform: translate3d(0, -25%, 0);
   }
 }
+
+
+
+/* Loading Object */
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+.stock-data-info
+{
+  position: absolute;
+  text-align: center;
+  background: white;
+  margin: 2.5%;
+  border-radius: 5px 5px;
+  font-size: 15px;
+  width: 45%;
+  color: gray;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  font-family: 'Cairo', sans-serif;
+  opacity: 0.5;
+  transition: 500ms;
+}
+
+.stock-data-info:hover
+{
+  transform: scale(1.05);
+}
+
+.stock-data-info-header
+{
+  color: rgba(81,84,115,1);
+  font-size: 12px;
+}

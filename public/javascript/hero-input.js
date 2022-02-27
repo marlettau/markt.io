@@ -1,11 +1,16 @@
 var menu = document.getElementById("stockSearchInfoDialog")
 
+$(".lds-ring").hide();
+$(".stockOutput").hide();
+
 $(document).ready(function() {
   $('#heroStockForm').on("submit", function(event){
     event.preventDefault();
     let value = $("#stockInput").val().toUpperCase();
     $(".stockOutput").text("Loading...");
     $('.disable-overlay').css('display', 'flex');
+    $(".lds-ring").fadeIn("slow");
+    $(".stockOutput").fadeIn("slow");
 
     $.ajax({
       url: "/stocksearch",
@@ -21,10 +26,12 @@ $(document).ready(function() {
           $(".hero-stock-input-container").find("i").addClass('hero-stock-input-icon-error');
           $('.disable-overlay').css('display', 'flex');
           $(".stockOutput").html("Not a real stock symbol");
+          $(".lds-ring").fadeOut();
         }
         else {
           $(".stockOutput").html(`${res.response}`);
           $('.disable-overlay').css('display', 'none');
+          $(".lds-ring").fadeOut();
         }
       }
     })
@@ -56,10 +63,6 @@ $(function() {
     menu.style.display = 'block';
     menu.style.left = offset.left + "px";
     menu.style.top = offset.top + "px";
-
-
-    console.log( this.tagName +
-    " coords ( " + offset.left + ", " + offset.top + " )" );
   });
 
   $(".stock-search-info-dialog").on("mouseleave", function(){
