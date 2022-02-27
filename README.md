@@ -19,7 +19,7 @@ Use NPM to install these node packages after installing source code.
 
 Scraping Method for basic stock data
 
-```
+```javascript
   const getCurrentStockPrice = await page.evaluate(() => {
       const stock = window.location.href;
       const stockSymbol = stock.substring(stock.indexOf('quote/')+6, stock.length);
@@ -32,10 +32,11 @@ Scraping Method for basic stock data
 <br>
 <br>
 
-Query Stock Scrraping Concept (Light Weight)
+Query Stock Scrraping Concept (Light Weight) (Good for Live Market Price Ticker use)
 
-```
-https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=15min&outputsize=full&apikey=demo
+```javascript
+
+await page.goto("https://query1.finance.yahoo.com/v8/finance/chart/aapl" + stockSymbol);
 
 const getCurrentStockPrice = await page.evaluate(() => {
 
