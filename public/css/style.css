@@ -465,7 +465,7 @@ left: 0;
 
 .loadingOverlayGraphic
 {
-  transform: translateY(50%);
+  transform: translateY(40%);
   vertical-align: middle;
   justify-content: center;
   display: flex;
