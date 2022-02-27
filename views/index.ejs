@@ -13,9 +13,14 @@
   </head>
   <body scroll="no">
 
-    <div class="disable-overlay">
-
+    <div class="loadingOverlayGrapic">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+        <h2 id="stockOutput" class="stockOutput"></h2>
     </div>
+
+    <div class="loadingOverlay"></div>
+
+    <div class="disable-overlay"></div>
 
     <div class="hero">
       <div class="hero-horizontal-center">
@@ -48,16 +53,15 @@
             </div>
           </form>
 
-          <h2 id="stockOutput" class="stockOutput"></h2>
-          <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+
 
 
           <div class="stock-data-info">
             <div class="stock-data-info-header">
-              <h2>Stock Data for: NVDA</h2>
+              <h2>Stock Data</h2>
             </div>
             <hr class="rounded">
-          <p>Enter a stock symbol into the input to recive live and historic data associated with entered symbol.</p>
+          <p class="stockSearchInfoDialogStockPrice"></p>
           </div>
 
 

@@ -1,7 +1,9 @@
 var menu = document.getElementById("stockSearchInfoDialog")
 
-$(".lds-ring").hide();
+$(".loading-overlay").hide();
 $(".stockOutput").hide();
+$(".loadingOverlayGrapic").hide();
+$(".loadingOverlay").hide();
 
 $(document).ready(function() {
   $('#heroStockForm').on("submit", function(event){
@@ -9,7 +11,8 @@ $(document).ready(function() {
     let value = $("#stockInput").val().toUpperCase();
     $(".stockOutput").text("Loading...");
     $('.disable-overlay').css('display', 'flex');
-    $(".lds-ring").fadeIn("slow");
+    $(".loadingOverlay").fadeIn("slow");
+    $(".loadingOverlayGrapic").fadeIn("slow");
     $(".stockOutput").fadeIn("slow");
 
     $.ajax({
@@ -26,12 +29,14 @@ $(document).ready(function() {
           $(".hero-stock-input-container").find("i").addClass('hero-stock-input-icon-error');
           $('.disable-overlay').css('display', 'flex');
           $(".stockOutput").html("Not a real stock symbol");
-          $(".lds-ring").fadeOut();
+          $(".loadingOverlay").fadeOut();
+          $(".loadingOverlayGrapic").fadeOut();
         }
         else {
-          $(".stockOutput").html(`${res.response}`);
+          $(".stockSearchInfoDialogStockPrice").html(`${res.response}`);
           $('.disable-overlay').css('display', 'none');
-          $(".lds-ring").fadeOut();
+          $(".loadingOverlay").fadeOut();
+          $(".loadingOverlayGrapic").fadeOut();
         }
       }
     })

@@ -419,3 +419,31 @@ transform-origin: center center;
   color: rgba(81,84,115,1);
   font-size: 12px;
 }
+
+
+.loadingOverlay
+{
+  /* transform: translateY(50%); */
+  vertical-align: middle;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+z-index: 15;
+backdrop-filter: blur(6px);
+filter: blur(6px);
+}
+
+.loadingOverlayGrapic
+{
+  transform: translateY(50%);
+  vertical-align: middle;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 16;
+}
