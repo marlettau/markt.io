@@ -2,7 +2,7 @@ var menu = document.getElementById("stockSearchInfoDialog")
 
 $(".loading-overlay").hide();
 $(".stockOutput").hide();
-$(".loadingOverlayGrapic").hide();
+$(".loadingOverlayGraphic").hide();
 $(".loadingOverlay").hide();
 $(".main-content").hide();
 
@@ -40,7 +40,7 @@ $(document).ready(function() {
           $('.disable-overlay').css('display', 'flex');
           $(".stockOutput").html("Not a real stock symbol");
           $(".loadingOverlay").fadeOut();
-          $(".loadingOverlayGrapic").fadeOut();
+          $(".loadingOverlayGraphic").fadeOut();
         }
         else {
           $(".stockSearchInfoDialogStockPrice").html(`${res.response}`);
@@ -49,7 +49,7 @@ $(document).ready(function() {
           $(".site-logo").addClass('site-logo-next-newPage');
           $('.disable-overlay').css('display', 'none');
           $(".loadingOverlay").fadeOut();
-          $(".loadingOverlayGrapic").fadeOut();
+          $(".loadingOverlayGraphic").fadeOut();
         }
       }
     })
