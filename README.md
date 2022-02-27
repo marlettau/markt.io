@@ -13,8 +13,13 @@ Use NPM to install these node packages after installing source code.
 * npm node-html-parser
 
 
+Scraping Method for basic stock data
+
 ```
-function test() {
-  console.log("notice the blank line before this function?");
-}
+  const getCurrentStockPrice = await page.evaluate(() => {
+      const stock = window.location.href;
+      const stockSymbol = stock.substring(stock.indexOf('quote/')+6, stock.length);
+      const currentStockPrice = document.querySelector(`[data-symbol="${stockSymbol}"][data-field="regularMarketPrice"]`);
+      return currentStockPrice.innerHTML;
+    });
 ```
