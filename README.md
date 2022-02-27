@@ -13,7 +13,7 @@ Use NPM to install these node packages after installing source code.
 * npm node-html-parser
 
 
-
+<br>
 
 Scraping Method for basic stock data
 
