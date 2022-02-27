@@ -11,3 +11,10 @@ Use NPM to install these node packages after installing source code.
 * npm node-fetch
 * npm body-parser
 * npm node-html-parser
+
+
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
