@@ -61,6 +61,6 @@ const getCurrentStockPrice = await page.evaluate(() => {
 
 New Query for live stock data 
 
-```javacript
+```javascript
 await page.goto("https://query1.finance.yahoo.com/v7/finance/quote?symbols=(STOCK SYMBOL)");
 ```
