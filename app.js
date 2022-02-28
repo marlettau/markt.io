@@ -89,11 +89,13 @@ req.continue();
       return currentStockPrice.innerHTML;
     });
 
+    /*
+
     const getAfterMarketStockPrice = await page.evaluate(() => {
       const stock = window.location.href;
       const stockSymbol = stock.substring(stock.indexOf('quote/')+6, stock.length);
       const afterMarketStockPrice = document.querySelector(`[data-symbol="${stockSymbol}"][data-field="postMarketPrice"]`);
-      return afterMarketStockPrice.innerHTML;
+      return afterMarketStockPrice.text;
     });
 
     const getCurrentPriceChange = await page.evaluate(() => {
@@ -109,6 +111,7 @@ req.continue();
       const afterMarketStockPrice = document.querySelector(`[data-symbol="${stockSymbol}"][data-field="postMarketChange"] span`);
       return afterMarketStockPrice.innerHTML;
     });
+    */
 
 
 
