@@ -169,8 +169,10 @@ res.render('index', {stockSymbolInput: "Stock"});
 
 });
 
-
 app.get('*', function(req, res){
+    const url = req.originalUrl;
+    const responseString = `This page does not exist: ${url}`;
+    console.log(responseString);
   res.render('error');
 });
 
