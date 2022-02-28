@@ -141,7 +141,7 @@ app.use(bodyParser.json());
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index');
 });
 
@@ -169,6 +169,10 @@ res.render('index', {stockSymbolInput: "Stock"});
 
 });
 
+
+app.get('*', function(req, res){
+  res.render('error');
+});
 
 app.listen(port, () => console.info(`Listenting on port ${port}`));
 
