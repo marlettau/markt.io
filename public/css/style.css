@@ -499,3 +499,29 @@ left: 0;
   text-align: center;
   font-weight: lighter;
 }
+
+.returnHomeButton
+{
+  font-family: 'Cairo', sans-serif;
+  width: 20%;
+  opacity: 0.5;
+  padding:10px;
+ border:0;
+ box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+transform-origin: center center;
+  transition: transform 500ms, background-color 250ms;
+  font-size: 18px;
+}
+
+.returnHomeButton:hover
+{
+  transform: scale(0.95);
+  cursor: pointer;
+}
+
+.returnHomeButton:active
+{
+  opacity: 0.5;
+  transform: scale(0.5);
+}
