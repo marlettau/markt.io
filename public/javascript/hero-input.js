@@ -58,7 +58,7 @@ $(document).ready(function() {
 
 
 $(function() {
-  $(".hero-stock-input-container").on("click", function(){
+  $(".hero-stock-input-container").on("dblclick", function(){
     mainPage();
   }).on("animationend", function(){
     $(this).removeClass('hero-input-error');
@@ -68,6 +68,7 @@ $(function() {
 
   });
 });
+
 
 
 
