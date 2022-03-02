@@ -12,6 +12,7 @@ function mainPage()
   $(".main-content").fadeOut("slow");
   $(".page-content").removeClass('page-content-next-page');
   $(".site-logo").removeClass('site-logo-next-newPage');
+
 }
 
 
